@@ -20,7 +20,7 @@
       "function": {
         "vcryptoe5357f35PostConfirmation": {
           "deploymentBucketName": "amplify-vcrypto-dev-161023-deployment",
-          "s3Key": "amplify-builds/vcryptoe5357f35PostConfirmation-7161416f5168454f3641-build.zip"
+          "s3Key": "amplify-builds/vcryptoe5357f35PostConfirmation-6a452f667741786d6f2f-build.zip"
         }
       }
     }
