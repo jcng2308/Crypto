@@ -20,7 +20,11 @@
       "function": {
         "vcryptoe5357f35PostConfirmation": {
           "deploymentBucketName": "amplify-vcrypto-dev-161023-deployment",
-          "s3Key": "amplify-builds/vcryptoe5357f35PostConfirmation-6a452f667741786d6f2f-build.zip"
+          "s3Key": "amplify-builds/vcryptoe5357f35PostConfirmation-69355379736271763234-build.zip"
+        },
+        "ExchangeCoins": {
+          "deploymentBucketName": "amplify-vcrypto-dev-161023-deployment",
+          "s3Key": "amplify-builds/ExchangeCoins-393851614a6c74524837-build.zip"
         }
       }
     }

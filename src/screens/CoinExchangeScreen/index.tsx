@@ -1,108 +1,183 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, Image, TextInput, Pressable, Alert, KeyboardAvoidingView, Platform } from  'react-native';
-import { useRoute } from '@react-navigation/native';
+import React, { useState, useEffect, useContext } from 'react';
+import { View, Text, Image, TextInput, Pressable, Alert, KeyboardAvoidingView, Platform, ActivityIndicator } from  'react-native';
+import { useRoute, useNavigation } from '@react-navigation/native';
+import { API, graphqlOperation } from 'aws-amplify';
 const image = require('../../../assets/images/Saly-31.png');
+import { exchangeCoins } from '../../graphql/mutations';
 import styles from './styles';
+import AppContext from '../../utils/AppContext';
+import { listPortfolioCoins } from '../../graphql/queries';
+import formatMoney from '../../utils/formatMoney';
 
-
-interface CoinExchangeProps {
-    isBuy: boolean;
-
-}
-
-
+const USD_COIN_ID = 'usd';
 
 const CoinExchangeScreen = () => {
-    const [coinAmount, setCoinAmount] = useState('')
-    const [coinUSDValue, setCoinUSDValue] = useState('')
+  const [coinAmount, setCoinAmount] = useState('')
+  const [coinUSDValue, setCoinUSDValue] = useState('')
+  const [usdPortfolioCoin, setUsdPortfolioCoin] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
-    const route = useRoute();
+  const navigation = useNavigation();
 
-    const maxUSD = 100000;
+  const { userId } = useContext(AppContext);
 
-    const isBuy = route?.params?.isBuy;
-    const coinData = route?.params?.coinData;
+  const route = useRoute();
 
-    useEffect(() => {
-        const amount = parseFloat(coinAmount)
-        if (!amount && amount !== 0) {
-          setCoinAmount("");
-          setCoinUSDValue("");
-          return;
-        }
-        setCoinUSDValue((amount * coinData?.currentPrice).toString());
-      }, [coinAmount]);
+  const isBuy = route?.params?.isBuy;
+  const coin = route?.params?.coin;
+  const portfolioCoin = route?.params?.portfolioCoin;
 
-    useEffect(() => {
-        const amount = parseFloat(coinUSDValue)
-        if (!amount && amount !== 0) {
-          setCoinAmount("");
-          setCoinUSDValue("");
-          return;
-        }
-        setCoinAmount((amount / coinData?.currentPrice).toString());
-      }, [coinUSDValue]);
+  const getUSDPortfolioCoin = async () => {
+    try {
+      const response = await API.graphql(
+        graphqlOperation(listPortfolioCoins,
+          { filter: {
+              and: {
+                coinId: { eq: USD_COIN_ID },
+                userId: { eq: userId }
+              }
+            }}
+        )
+      )
+      if (response.data.listPortfolioCoins.items.length > 0) {
+        setUsdPortfolioCoin(response.data.listPortfolioCoins.items[0]);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
 
-      const onPlaceOrder = () => {
-          if (isBuy && parseFloat(coinUSDValue) > maxUSD) {
-              Alert.alert('Error', `Not enough USD coins. Max: ${maxUSD}`);
-              return;
-          }
+  useEffect(() => {
+    getUSDPortfolioCoin();
+  }, [])
 
-          if (!isBuy && parseFloat(coinAmount) > coinData.amount) {
-              Alert.alert('Error', `Not enough ${coinData.symbol} coins. Max: ${coinData.amount}`);
-              return;
-          }
+  useEffect(() => {
+    const amount = parseFloat(coinAmount)
+    if (!amount && amount !== 0) {
+      setCoinAmount("");
+      setCoinUSDValue("");
+      return;
+    }
+    setCoinUSDValue((amount * coin?.currentPrice).toString());
+  }, [coinAmount]);
 
+  useEffect(() => {
+    const amount = parseFloat(coinUSDValue)
+    if (!amount && amount !== 0) {
+      setCoinAmount("");
+      setCoinUSDValue("");
+      return;
+    }
+    setCoinAmount((amount / coin?.currentPrice).toString());
+  }, [coinUSDValue]);
+
+  const onSellAll = () => {
+    setCoinAmount(portfolioCoin.amount);
+  }
+
+  const onBuyAll = () => {
+    setCoinUSDValue(usdPortfolioCoin?.amount || 0);
+  }
+
+  const placeOrder = async () => {
+    if (isLoading) {
+      return;
+    }
+    setIsLoading(true);
+    try {
+      const variables = {
+        coinId: coin.id,
+        isBuy,
+        amount: parseFloat(coinAmount),
+        usdPortfolioCoinId: usdPortfolioCoin?.id,
+        coinPortfolioCoinId: portfolioCoin?.id,
       }
 
-    return (
-        <KeyboardAvoidingView
-            style={styles.root}
-            behavior={Platform.OS === "android" ? "padding" : "height"}
-            keyboardVerticalOffset={100}
-        >
-            
-            <Text style={styles.title}>
-            {isBuy ? 'Buy' : "Sell"}
-            {coinData?.name}
-            </Text>
-            <Text style={styles.subtitle}>
-                1 {coinData?.symbol}
-                {' = '}
-                ${coinData?.currentPrice}
-            </Text>
-            <Image style={styles.image} source={image} />
+      const response = await API.graphql(
+        graphqlOperation(exchangeCoins, variables)
+      )
+      if (response.data.exchangeCoins) {
+        navigation.navigate('Portfolio');
+      } else {
+        Alert.alert('Error', 'There was an error exchanging coins');
+      }
+    } catch (e) {
+      Alert.alert('Error', 'There was an error exchanging coins');
+      console.error(e);
+    }
+    setIsLoading(false);
+  }
 
-            <View style={styles.inputsContainer}>
-                <View style={styles.inputContainer}>
-                    <TextInput
-                        keyboardType="decimal-pad"
-                        placeholder="0"
-                        value={coinAmount}
-                        onChangeText={setCoinAmount}
-                    />
-                    <Text>{coinData?.symbol}</Text>
-                </View>
-                <Text style={{fontSize: 30}}>=</Text>
+  const onPlaceOrder = async () => {
+    const maxUsd = usdPortfolioCoin?.amount || 0;
+    if (isBuy && parseFloat(coinUSDValue) > maxUsd) {
+      Alert.alert('Error', `Not enough USD coins. Max: ${maxUsd}`);
+      return;
+    }
+    if (!isBuy && (!portfolioCoin || parseFloat(coinAmount) > portfolioCoin.amount)) {
+      Alert.alert('Error', `Not enough ${coin.symbol} coins. Max: ${portfolioCoin.amount || 0}`);
+      return;
+    }
 
-                <View style={styles.inputContainer}>
-                    <TextInput
-                        keyboardType="decimal-pad"
-                        placeholder="0"
-                        value={coinUSDValue}
-                        onChangeText={setCoinUSDValue}
-                    />
-                    <Text>USD</Text>
-                </View>
-            </View>
+    await placeOrder();
+  }
 
-            <Pressable style={styles.button} onPress={onPlaceOrder}>
-                <Text style={styles.buttonText}>Place Order</Text>
-            </Pressable>
+  return (
+    <KeyboardAvoidingView
+      style={styles.root}
+      behavior={Platform.OS === "android" ? "padding" : "height"}
+      keyboardVerticalOffset={80}
+    >
+      <Text style={styles.title}>
+        {isBuy ? 'Buy ' : "Sell "}
+        {coin?.name}
+      </Text>
+      <Text style={styles.subtitle}>
+        1 {coin?.symbol}
+        {' = '}
+        ${formatMoney(coin?.currentPrice)}
+      </Text>
+      <Image style={styles.image} source={image} />
 
-        </KeyboardAvoidingView>
-    );
+      <View style={styles.inputsContainer}>
+        <View style={styles.inputContainer}>
+          <TextInput
+            keyboardType="decimal-pad"
+            placeholder="0"
+            value={coinAmount}
+            onChangeText={setCoinAmount}
+          />
+          <Text>{coin?.symbol}</Text>
+        </View>
+        <Text style={{fontSize: 30}}>=</Text>
+
+        <View style={styles.inputContainer}>
+          <TextInput
+            keyboardType="decimal-pad"
+            placeholder="0"
+            value={coinUSDValue}
+            onChangeText={setCoinUSDValue}
+          />
+          <Text>USD</Text>
+        </View>
+      </View>
+
+      {isBuy ? (
+        <Pressable onPress={onBuyAll}>
+          <Text style={{color: '#0097ff'}}>Buy max</Text>
+        </Pressable>
+      ) : (
+        <Pressable onPress={onSellAll}>
+          <Text style={{color: '#0097ff'}}>Sell all</Text>
+        </Pressable>
+      )}
+
+      <Pressable style={styles.button} onPress={onPlaceOrder}>
+        <Text style={styles.buttonText}>Place Order</Text>
+        {isLoading && <ActivityIndicator color={'white'} />}
+      </Pressable>
+    </KeyboardAvoidingView>
+  );
 };
 
 export default CoinExchangeScreen;

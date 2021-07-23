@@ -14,21 +14,17 @@ const styles = StyleSheet.create({
 
   userContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     height: 50,
     marginVertical: 10,
     width: '100%',
   },
   userImage: {
-    height: 75,
-    width: 75,
+    height: 100,
+    width: 100,
     marginRight: 10,
     borderRadius: 50,
-  },
-  left: {
-      flexDirection: 'row',
-      alignItems: 'center',
   },
   name: {
     fontWeight: 'bold',
