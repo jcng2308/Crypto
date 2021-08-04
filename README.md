@@ -132,5 +132,5 @@
   
 <p>Application Walkthrough and Screenshots</p>
 
-![Screenshot_20210805-012320_Expo Go](https://user-images.githubusercontent.com/64765004/128238926-70bbea10-782a-4163-95c2-450491d087a9.jpg)
+![Screenshot_20210805-012320_Expo Go]<img src="https://user-images.githubusercontent.com/64765004/128238926-70bbea10-782a-4163-95c2-450491d087a9.jpgo" width="48">
 
