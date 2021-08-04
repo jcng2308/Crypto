@@ -1,4 +1,4 @@
-# Crypto
+# VirtualCrypto
 <p><strong>Introduction:</strong></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">The explosive rise of the cryptocurrency prices has caused a surge in the number of investors over the recent months. However, the following slump after the massive surge has caused many greenhorns to lose a significant sum of cash. Hence, I thought it would be fun to create an application for people to virtually invest without any risk.&nbsp;</span></p>
@@ -13,5 +13,6 @@
 
 
 <p><strong>Data Model</strong></p>
-![Data model](https://user-images.githubusercontent.com/64765004/128237213-f540a063-06d9-49a5-9fe1-3f4381252196.png)
+![adaptive-icon](https://user-images.githubusercontent.com/64765004/128237387-ac7d9983-7837-44a8-b285-068516f51433.png)
+
 
