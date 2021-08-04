@@ -15,23 +15,25 @@
 <p><strong>Data Model</strong></p>
 ![Data model](https://user-images.githubusercontent.com/64765004/128237598-91f2e95e-890b-463c-96ea-2c92e2260d67.png)
 
-<p><span style="font-weight: 400;">Languages used:</span></p>
+
+
+<p><strong>Languages used:</strong></p>
 <p><span style="font-weight: 400;">TypeScript</span></p>
 <p><span style="font-weight: 400;">Javascript</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Package Imports</span></p>
+<p><strong>Package Imports</strong></p>
 <p><span style="font-weight: 400;">&lsquo;React&rsquo;</span></p>
 <p><span style="font-weight: 400;">&lsquo;React-native&rsquo;</span></p>
 <p><span style="font-weight: 400;">&lsquo;React-native-chart-kit&rsquo;</span></p>
 <p><span style="font-weight: 400;">&lsquo; aws-amplify&rsquo;</span></p>
 <p><span style="font-weight: 400;">&lsquo;@react-navigation/native&rsquo;</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">Technologies and languages used:</span></p>
+<p><strong>Technologies and languages used:</strong></p>
 <p><span style="font-weight: 400;">Expo&nbsp;</span></p>
 <p><span style="font-weight: 400;">React Native</span></p>
 <p><span style="font-weight: 400;">AWS (Amplify, Appsync, S3 , Lambda, CloudWatch, DynamoDB)</span></p>
 <p><span style="font-weight: 400;">GraphQL</span></p>
-
+<p><br /><br /></p>
 <table>
 <tbody>
 <tr>
