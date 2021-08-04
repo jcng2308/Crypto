@@ -57,8 +57,8 @@ const WelcomeScreen = () => {
     return (
         <View style={styles.root}>
             <Image style={styles.image} source={image} />
-            <Text style={styles.header1}>Welcome to VCrypto</Text>
-            <Text style = {styles.header2}>Invest your virtual $100,000 and compete with others</Text>
+            <Text style={styles.header1}>Welcome to Crypto</Text>
+            <Text style = {styles.header2}>Invest your $100,000 and earn a spot in the top leaderboard!</Text>
 
             <Pressable onPress={signInGoogle} style={styles.googleButton}>
                 <Image style={styles.buttonImage} source={googleButtonImage} />
