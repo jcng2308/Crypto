@@ -131,6 +131,9 @@
 
   
 <p>Application Walkthrough and Screenshots</p>
-  
-<img src="https://user-images.githubusercontent.com/64765004/128239553-ea4d6894-d941-4eeb-a0ce-6410fdd31555.jpg" width="256" height="455">
+<p align="center">
+  </p><img src="https://user-images.githubusercontent.com/64765004/128239553-ea4d6894-d941-4eeb-a0ce-6410fdd31555.jpg" width="256" height="455">
+  <img src="screen2.png" width="256" height="455">
+  <img src="screen3.png" width="256" height="455">
+
 
