@@ -13,6 +13,7 @@
 
 
 <p><strong>Data Model</strong></p>
+  
 ![Data model](https://user-images.githubusercontent.com/64765004/128237598-91f2e95e-890b-463c-96ea-2c92e2260d67.png)
 
 
