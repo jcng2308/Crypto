@@ -13,3 +13,4 @@
 
 
 <p><strong>Data Model</strong></p>
+![Data model](https://user-images.githubusercontent.com/64765004/128236956-ebb36fd7-6568-42a8-ba92-03ded3768734.png)
