@@ -13,6 +13,7 @@
 
 
 <p><strong>Data Model</strong></p>
-![adaptive-icon](https://user-images.githubusercontent.com/64765004/128237387-ac7d9983-7837-44a8-b285-068516f51433.png)
+![Data model](https://user-images.githubusercontent.com/64765004/128237598-91f2e95e-890b-463c-96ea-2c92e2260d67.png)
+
 
 
