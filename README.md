@@ -162,9 +162,5 @@
   <p>TradingScreen: Buying and selling of coins whcih will be reflected in user's portfolio</p>
  </p>
 
-<p align="center">
-  </p><img src="https://user-images.githubusercontent.com/64765004/128553591-c77443e9-da90-4115-bc09-d6950c1a909d.jpg" width="256" height="455">
-  <p><span style="font-weight: 400;">RankingScreen: Compete with other users on this app </span></p>
- </p>
 
   
