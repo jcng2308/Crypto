@@ -11,17 +11,14 @@
 
 <p align="center">
   </p><img src="https://user-images.githubusercontent.com/64765004/128555597-3a0b558f-09f0-49fd-8dad-93128fc74a87.png" width="70%" height="50%">
-  <p><span style="font-weight: 400;">Welcome Screen: Signing in with Google as an option</span></p>
+  <p><span style="font-weight: 400;">DyanoDB: Storing of User profile, Coin prices and Portfolio </p>
   
   <img src="https://user-images.githubusercontent.com/64765004/128555619-d6fb125c-8710-49e7-bafd-f6db44c667fd.png" width="70%" height="50%">
-  <p><span style="font-weight: 400;">HomeScreen: After logging in, you are able to access the tabs</span></p>
+  <p><span style="font-weight: 400;">AppSync: Queries></p>
   
   <img src="https://user-images.githubusercontent.com/64765004/128555632-8de6ac5e-cf73-4ca3-9641-54d7affb91bc.png" width="70%" height="50%">
-  <p><span style="font-weight: 400;">PortfolioScreen: Showcasing your coins and portfolio balance</span></p>
+  <p><span style="font-weight: 400;">AppSync: Implementing of Schema </span></p>
   
-  <img src="https://user-images.githubusercontent.com/64765004/128555632-8de6ac5e-cf73-4ca3-9641-54d7affb91bc.png" width="70%" height="50%">
-  <p><span style="font-weight: 400;">PortfolioScreen: Showcasing your coins and portfolio balance</span></p>
-  </p>
 
 
   
