@@ -143,7 +143,7 @@
   </p><img src="https://user-images.githubusercontent.com/64765004/128239553-ea4d6894-d941-4eeb-a0ce-6410fdd31555.jpg" width="256" height="455">
   <p><span style="font-weight: 400;">Welcome Screen: Signing in with Google as an option</span></p>
   
-  <img src="https://user-images.githubusercontent.com/64765004/128491671-f2f01b22-fb48-4862-b8fc-3c42d1f3b5a0.jpg" width="256" height="455">
+  <img src="https://user-images.githubusercontent.com/64765004/128558045-6c68e38a-858e-42c3-ab7f-a660f3917234.jpg" width="256" height="455">
   <p><span style="font-weight: 400;">HomeScreen: After logging in, you are able to access the tabs</span></p>
   
   <img src="https://user-images.githubusercontent.com/64765004/128491791-e651e614-7155-4001-9d6f-2eaaf5038b">
