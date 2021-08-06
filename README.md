@@ -145,8 +145,9 @@
   
   <img src="https://user-images.githubusercontent.com/64765004/128558045-6c68e38a-858e-42c3-ab7f-a660f3917234.jpg" width="256" height="455">
   <p><span style="font-weight: 400;">HomeScreen: After logging in, you are able to access the tabs</span></p>
+
   
-  <img src="https://user-images.githubusercontent.com/64765004/128558189-90dfff40-09c2-4987-9399-5ee37b55bde8.jpg" width="256" height="455">
+  <img src="https://user-images.githubusercontent.com/64765004/128558959-14626792-1667-41ac-be8a-978ccbe76a1e.jpg" width="256" height="455">
   <p><span style="font-weight: 400;">PortfolioScreen: Showcasing your coins and portfolio balance</span></p>
   
   <img src="https://user-images.githubusercontent.com/64765004/128557848-1d750a4b-843a-455f-bee4-2f5a7a35113f.jpg" width="256" height="455">
