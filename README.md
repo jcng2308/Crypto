@@ -2,7 +2,6 @@
 <p><strong>Introduction:</strong></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">The explosive rise of the cryptocurrency prices has caused a surge in the number of investors over the recent months. However, the following slump after the massive surge has caused many greenhorns to lose a significant sum of cash. Hence, I thought it would be fun to create an application for people to virtually invest without any risk.&nbsp;</span></p>
-<p>&nbsp;</p>
 <p><span style="font-weight: 400;">VirtualCrypto is a project aimed to create an enjoyable platform for individuals to virtually invest their money in an attempt to reach the leaderboards.</span></p>
 
 <p><strong>Architecture:</strong></p>
@@ -11,16 +10,13 @@
 
 <p align="center">
   </p><img src="https://user-images.githubusercontent.com/64765004/128555597-3a0b558f-09f0-49fd-8dad-93128fc74a87.png" width="70%" height="50%">
-  <p><span style="font-weight: 400;">DyanoDB: Storing of User profile, Coin prices and Portfolio </p>
+  <p><span style="font-weight: 400;">DyamoDB: Storing of User profile, Coin prices and Portfolio </p>
   
   <img src="https://user-images.githubusercontent.com/64765004/128555619-d6fb125c-8710-49e7-bafd-f6db44c667fd.png" width="70%" height="50%">
   <p><span style="font-weight: 400;">AppSync: Queries></p>
   
   <img src="https://user-images.githubusercontent.com/64765004/128555632-8de6ac5e-cf73-4ca3-9641-54d7affb91bc.png" width="70%" height="50%">
   <p><span style="font-weight: 400;">AppSync: Implementing of Schema </span></p>
-  
-
-
   
   
 ![Archi](https://user-images.githubusercontent.com/64765004/128236895-acbf4e28-1997-476c-847f-8c071664b132.png)
@@ -29,8 +25,6 @@
 <p><strong>Data Model</strong></p>
   
 ![Data model](https://user-images.githubusercontent.com/64765004/128237598-91f2e95e-890b-463c-96ea-2c92e2260d67.png)
-
-
 
 <p><strong>Languages used:</strong></p>
 <p><span style="font-weight: 400;">TypeScript</span></p>
