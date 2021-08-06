@@ -145,5 +145,6 @@
   <img src="https://user-images.githubusercontent.com/64765004/128493054-73db9e86-d74b-47c1-9886-1708bc9a4f2f.jpg" width="256" height="455" />
   <img src="https://user-images.githubusercontent.com/64765004/128493079-8ca29df2-4db7-4d05-a9e4-9924e7aab698.jpg" width="256" height="455" />
   <img src="https://user-images.githubusercontent.com/64765004/128552285-49b2d0d0-e8c1-43ab-8225-aefff37a8863.jpg" width="256" height="455" />
+  <p><span style="font-weight: 400;">MarketScreen: Using webscraping CoinGecko API and obtaining the prices of the coins </span></p>
 
 </p>
