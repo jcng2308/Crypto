@@ -23,16 +23,7 @@
   <p><span style="font-weight: 400;">PortfolioScreen: Showcasing your coins and portfolio balance</span></p>
   </p>
 
-<p float="center">
-  <img src="https://user-images.githubusercontent.com/64765004/128555597-3a0b558f-09f0-49fd-8dad-93128fc74a87.png" width="256" height="455" />
 
-  <img src="https://user-images.githubusercontent.com/64765004/128555619-d6fb125c-8710-49e7-bafd-f6db44c667fd.png" width="256" height="455" />
-
-  <img src="https://user-images.githubusercontent.com/64765004/128555632-8de6ac5e-cf73-4ca3-9641-54d7affb91bc.png" width="256" height="455" />
-
-  <img src="https://user-images.githubusercontent.com/64765004/128555643-058ba467-be33-43f8-bf3c-850aa11e2f56.png" width="256" height="455" />
-
-</p>
   
   
 ![Archi](https://user-images.githubusercontent.com/64765004/128236895-acbf4e28-1997-476c-847f-8c071664b132.png)
