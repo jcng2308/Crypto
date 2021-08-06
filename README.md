@@ -10,10 +10,10 @@
 
 
 <p align="center">
-  </p><img src="https://user-images.githubusercontent.com/64765004/128555597-3a0b558f-09f0-49fd-8dad-93128fc74a87.png" width="256" height="455">
+  </p><img src="https://user-images.githubusercontent.com/64765004/128555597-3a0b558f-09f0-49fd-8dad-93128fc74a87.png" width="60%" height="50%">
   <p><span style="font-weight: 400;">Welcome Screen: Signing in with Google as an option</span></p>
   
-  <img src="https://user-images.githubusercontent.com/64765004/128555619-d6fb125c-8710-49e7-bafd-f6db44c667fd.png" width="256" height="455">
+  <img src="https://user-images.githubusercontent.com/64765004/128555619-d6fb125c-8710-49e7-bafd-f6db44c667fd.png" width="500" height="455">
   <p><span style="font-weight: 400;">HomeScreen: After logging in, you are able to access the tabs</span></p>
   
   <img src="https://user-images.githubusercontent.com/64765004/128555632-8de6ac5e-cf73-4ca3-9641-54d7affb91bc.png" width="256" height="455">
