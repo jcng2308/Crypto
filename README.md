@@ -7,6 +7,24 @@
 
 <p><strong>Architecture:</strong></p>
 <p><span style="font-weight: 400;">The backend is built using AWS Amplify. Amplify using AWS Cognito for the authentication (Sign In and out). AWS Appsync for the API, S3 for the storage. Using Lambda Function, that runs on cloud, will fetch and update the prices every few minutes from CoinGecko API and fulfil the orders.
+![Screenshot (26)](https://user-images.githubusercontent.com/64765004/128555597-3a0b558f-09f0-49fd-8dad-93128fc74a87.png)
+  ![Screenshot (27)](https://user-images.githubusercontent.com/64765004/128555619-d6fb125c-8710-49e7-bafd-f6db44c667fd.png)
+  ![Screenshot (28)](https://user-images.githubusercontent.com/64765004/128555632-8de6ac5e-cf73-4ca3-9641-54d7affb91bc.png)
+  ![Screenshot (29)](https://user-images.githubusercontent.com/64765004/128555643-058ba467-be33-43f8-bf3c-850aa11e2f56.png)
+
+
+
+
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/64765004/128555597-3a0b558f-09f0-49fd-8dad-93128fc74a87.png" width="256" height="455" />
+  <p><span style="font-weight: 400;">Welcome Screen: Signing in with Google as an option</span></p>
+  <img src="https://user-images.githubusercontent.com/64765004/128555619-d6fb125c-8710-49e7-bafd-f6db44c667fd.png" width="256" height="455" />
+  <p><span style="font-weight: 400;">Welcome Screen: Signing in with Google as an option</span></p>
+  <img src="https://user-images.githubusercontent.com/64765004/128555632-8de6ac5e-cf73-4ca3-9641-54d7affb91bc.png" width="256" height="455" />
+  <p><span style="font-weight: 400;">Welcome Screen: Signing in with Google as an option</span></p>
+  <img src="https://user-images.githubusercontent.com/64765004/128555643-058ba467-be33-43f8-bf3c-850aa11e2f56.png" width="256" height="455" />
+  <p><span style="font-weight: 400;">Welcome Screen: Signing in with Google as an option</span></p>
+</p>
   
   
 ![Archi](https://user-images.githubusercontent.com/64765004/128236895-acbf4e28-1997-476c-847f-8c071664b132.png)
