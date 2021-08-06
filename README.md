@@ -37,7 +37,7 @@
 <p><span style="font-weight: 400;">&lsquo; aws-amplify&rsquo;</span></p>
 <p><span style="font-weight: 400;">&lsquo;@react-navigation/native&rsquo;</span></p>
 <p>&nbsp;</p>
-<p><strong>Technologies and languages used:</strong></p>
+<p><strong>Technologies:</strong></p>
 <p><span style="font-weight: 400;">Expo&nbsp;</span></p>
 <p><span style="font-weight: 400;">React Native</span></p>
 <p><span style="font-weight: 400;">AWS (Amplify, Appsync, S3 , Lambda, CloudWatch, DynamoDB)</span></p>
