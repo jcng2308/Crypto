@@ -141,4 +141,8 @@
   <img src="https://user-images.githubusercontent.com/64765004/128491791-e651e614-7155-4001-9d6f-2eaaf5038bfe.jpg" width="256" height="455">
   <p><span style="font-weight: 400;">PortfolioScreen: Showcasing your coins and portfolio balance</span></p>
 
-
+<p float="left">
+  <img src="/img1.png" width="100" />
+  <img src="/img2.png" width="100" /> 
+  <img src="/img3.png" width="100" />
+</p>
